@@ -95,11 +95,10 @@ func main(files:[Path]=[], width=80, inplace=no, min_split=3, rewrap=yes, hyphen
         else
             (/dev/stdout)
 
-        first := yes
         wrapped_paragraphs : @[Text]
         for paragraph in $Pat'{2+nl}'.split(text)
             wrapped_paragraphs.insert(
                 wrap(paragraph, width=width, min_split=min_split, hyphen=hyphen)
             )
 
-        out.write("\n\n".join(wrapped_paragraphs[]) ++ "\n")
+        out.write("\n\n".join(wrapped_paragraphs[]) ++ "\n")!
